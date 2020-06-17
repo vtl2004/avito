@@ -1,4 +1,4 @@
-package com.avito.service.serviceUser;
+package com.avito.service.interfaces;
 
 
 public interface ServiceUser {
