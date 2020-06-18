@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -21,6 +21,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Помощь</a>
+            </li>
+            <li sec:authorize="hasAuthority('ADMIN')" class="nav-item">
+                <a class="nav-link" href="#">Админ</a>
             </li>
         </ul>
         <ul class="navbar-nav">
