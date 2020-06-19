@@ -1,13 +1,20 @@
-package com.avito.service.serviceUser;
+package com.avito.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.avito.dao.interfaces.UserDao;
+import com.avito.models.User;
+import com.avito.service.interfaces.UserService;
 import org.springframework.stereotype.Service;
 
-@Service
-public class ServiceUserImp implements ServiceUser {
+import java.util.List;
 
-    @Autowired
+@Service
+public class UserServiceImpl implements UserService {
+
     private final UserDao userDao;
+
+    public UserServiceImpl(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public List<User> getAllUsers() {
