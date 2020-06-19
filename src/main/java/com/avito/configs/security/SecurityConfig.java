@@ -50,4 +50,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    public SpringSecurityDialect springSecurityDialect () {
+        return new SpringSecurityDialect();
+    }
+
 }
