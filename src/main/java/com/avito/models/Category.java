@@ -8,7 +8,7 @@ import java.util.Set;
 
 @Data
 @Entity
-@Table(name = "category")
+@Table(name = "categorys")
 public class Category {
 
     @Id
@@ -19,15 +19,15 @@ public class Category {
     private String name;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private Set<Category> subCategorys = new HashSet<>();
+    private Set<Category> subCategories = new HashSet<>();
 
     public Category() {
     }
 
-    public Category(long id, String name, Set<Category> subCategorys) {
+    public Category(long id, String name, Set<Category> subCategories) {
         this.id = id;
         this.name = name;
-        this.subCategorys = subCategorys;
+        this.subCategories = subCategories;
     }
 
 }
