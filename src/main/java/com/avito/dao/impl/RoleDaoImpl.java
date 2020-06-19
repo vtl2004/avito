@@ -1,6 +1,6 @@
 package com.avito.dao.impl;
 
-import com.avito.models.dto.Role;
+import com.avito.models.Role;
 import com.avito.dao.interfaces.RoleDao;
 import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;

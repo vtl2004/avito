@@ -1,6 +1,6 @@
 package com.avito.dao.impl;
 
-import com.avito.models.dto.User;
+import com.avito.models.User;
 import com.avito.dao.interfaces.UserDao;
 import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
