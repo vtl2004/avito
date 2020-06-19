@@ -1,26 +1,60 @@
 package com.avito.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "posting")
 public class Posting {
 
-    private final long id;
-    private final String title;
-    private final String description;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "posting_id")
+    @Getter
+    @Setter
+    private Long id;
 
-    public Posting(long id, String title, String description) {
-        this.id = id;
+    @Getter
+    @Setter
+    private String title;
+
+    @Getter
+    @Setter
+    @Column(name = "short_description")
+    private String shortDescription;
+
+    @Getter
+    @Setter
+    @Column(name = "full_description")
+    private String fullDescription;
+
+    @Getter
+    @Setter
+    @Column(name = "user_id")
+    private Long userId;
+
+    @Getter
+    @Setter
+    @Column(name = "category_id")
+    private Long categoryId;
+
+    @Getter
+    @Setter
+    @Column(name = "image_path")
+    private String imagePath;
+
+    public Posting() {
+    }
+
+    public Posting(String title, String shortDescription, String fullDescription, Long userId, Long categoryId, String imagePath) {
         this.title = title;
-        this.description = description;
+        this.shortDescription = shortDescription;
+        this.fullDescription = fullDescription;
+        this.userId = userId;
+        this.categoryId = categoryId;
+        this.imagePath = imagePath;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
 }
