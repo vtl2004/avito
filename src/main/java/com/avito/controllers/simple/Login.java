@@ -10,4 +10,7 @@ public class Login {
     public String login() {
         return "login";
     }
+
+    @GetMapping("/users")
+    public String users() { return "users"; }
 }

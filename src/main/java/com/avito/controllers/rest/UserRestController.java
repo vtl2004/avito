@@ -52,4 +52,10 @@ public class UserRestController {
         modelAndView.getModelMap().addAttribute("listUsers", allUsers);
         return modelAndView;
     }
+
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
+    }
+
 }
