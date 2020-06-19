@@ -1,5 +1,7 @@
 package com.avito.service.interfaces;
 
-public interface ServiceRole {
+import com.avito.models.Role;
+
+public interface RoleService {
     Role findRoleByName (String name);
 }

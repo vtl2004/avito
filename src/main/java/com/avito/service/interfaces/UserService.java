@@ -1,7 +1,11 @@
 package com.avito.service.interfaces;
 
 
-public interface ServiceUser {
+import com.avito.models.User;
+
+import java.util.List;
+
+public interface UserService {
         List<User> getAllUsers ();
         User findUserByLogin (String login);
         User addUser (User user);
