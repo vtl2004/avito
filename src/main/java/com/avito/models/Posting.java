@@ -16,6 +16,8 @@ public class Posting {
 
     private String title;
 
+    private long price;
+
     @Column(name = "short_description")
     private String shortDescription;
 
