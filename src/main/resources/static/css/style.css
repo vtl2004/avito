@@ -1,0 +1,149 @@
+/* только явным прописыванием стиля тут удалось сделать белым. почему? */
+.text-secondary a:hover,
+.text-white a:active,
+.text-white a:visited {
+    color: gray;
+}
+
+caption {
+    caption-side: top; /* Заголовок над таблицей */
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background: white;
+    transition: .3s;
+}
+
+header.active {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .5);
+}
+
+.header-container {
+    width: 100%;
+}
+.header-element{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0;
+}
+.header-element .btn {
+    width: 100%;
+}
+.form-group {
+    margin-bottom: 0;
+}
+.btn-primary{
+    padding: 2px 7px;
+}
+.container_cus {
+    margin-top: 150px !important;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.category_link {
+    height: 20px;
+}
+
+.category_link li {
+    margin: 0 6px;
+}
+
+.category_link li a {
+    padding: 0;
+}
+
+.all_category {
+    position: relative;
+    color: #007bff !important;
+}
+
+.all_category:hover {
+    cursor: pointer;
+    color: #0155af !important;
+}
+
+.container_main {
+    background: red;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav_category {
+    position: relative;
+}
+
+#moreCategories::after {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    top: -6px;
+    left: 47%;
+    background: white;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, .2);
+}
+
+#moreCategories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    top: 57px;
+    width: 500px;
+    left: -225px;
+    background: white;
+    z-index: 1;
+    padding: 15px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .7);
+    transition: .4s;
+}
+.bgOption{
+    background: #bbb6b6;
+}
+#moreCategories div {
+    min-width: 100px;
+}
+
+#moreCategories.on-off {
+    top: 37px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#moreCategories a {
+    text-decoration: none;
+}
+
+.top-rubricator-blockTitle {
+    font-size: 1.3rem;
+}
+
+.sub_categories {
+    display: flex;
+    flex-direction: column !important;
+}
+
+.sub_categories li {
+    margin: 0;
+}
+#findFromCategory{
+    overflow: scroll;
+}
