@@ -36,7 +36,7 @@ public class Posting {
     public Posting() {
     }
 
-    public Posting(String title, String shortDescription, String fullDescription, User user, Category category, String imagePath) {
+    public Posting(String title, Category category, User user, String fullDescription, String shortDescription, String imagePath) {
         this.title = title;
         this.shortDescription = shortDescription;
         this.fullDescription = fullDescription;
