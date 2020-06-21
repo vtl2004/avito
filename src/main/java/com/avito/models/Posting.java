@@ -24,8 +24,8 @@ public class Posting {
     @Column(name = "full_description")
     private String fullDescription;
 
-    @Column(name = "user_id")
-    private Long userId;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private User user;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Category category;
@@ -36,11 +36,11 @@ public class Posting {
     public Posting() {
     }
 
-    public Posting(String title, String shortDescription, String fullDescription, Long userId, Category category, String imagePath) {
+    public Posting(String title, String shortDescription, String fullDescription, User user, Category category, String imagePath) {
         this.title = title;
         this.shortDescription = shortDescription;
         this.fullDescription = fullDescription;
-        this.userId = userId;
+        this.user = user;
         this.category = category;
         this.imagePath = imagePath;
     }
