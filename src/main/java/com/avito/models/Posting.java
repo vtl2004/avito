@@ -27,8 +27,8 @@ public class Posting {
     @Column(name = "user_id")
     private Long userId;
 
-    @Column(name = "category_id")
-    private Long categoryId;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Category category;
 
     @Column(name = "image_path")
     private String imagePath;
@@ -36,12 +36,12 @@ public class Posting {
     public Posting() {
     }
 
-    public Posting(String title, String shortDescription, String fullDescription, Long userId, Long categoryId, String imagePath) {
+    public Posting(String title, String shortDescription, String fullDescription, Long userId, Category category, String imagePath) {
         this.title = title;
         this.shortDescription = shortDescription;
         this.fullDescription = fullDescription;
         this.userId = userId;
-        this.categoryId = categoryId;
+        this.category = category;
         this.imagePath = imagePath;
     }
 
