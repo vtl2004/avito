@@ -8,7 +8,7 @@ import java.util.Set;
 
 @Data
 @Entity
-@Table(name = "categorys")
+@Table(name = "categories")
 public class Category {
 
     @Id
