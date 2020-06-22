@@ -57,7 +57,7 @@ public class HeaderRestController {
         list.add("Бизнес");
         list.add("Помощь");
         return !list.isEmpty()
-                ? new ResponseEntity<List<String>>(list, HttpStatus.OK)
+                ? new ResponseEntity<>(list, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
