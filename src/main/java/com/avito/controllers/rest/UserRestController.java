@@ -5,13 +5,10 @@ import com.avito.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
-import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/user")
+@RequestMapping("/rest")
 public class UserRestController {
 
     private final UserService userService;
@@ -38,16 +35,10 @@ public class UserRestController {
     }
 
     // На случай если надо будет получить пользователя по ИД
+
 //    @GetMapping("/get/{id}")
 //    public User getUser(@PathVariable("id") String id) {
-//       return  userById = userService.findById(id);
+//       return  userService.findById(id);
 //    }
 
-    @GetMapping("/all")
-    public ModelAndView list() {
-        List<User> allUsers = userService.getAllUsers();
-        ModelAndView modelAndView = new ModelAndView("????????"); //надо добавить вьюшку
-        modelAndView.getModelMap().addAttribute("listUsers", allUsers);
-        return modelAndView;
-    }
 }
