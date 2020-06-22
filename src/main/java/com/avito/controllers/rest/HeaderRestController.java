@@ -45,9 +45,7 @@ public class HeaderRestController {
         list.add(category3);
         list.add(category4);
         Category category0 = new Category("ALL", list);
-        return category0 != null
-                ? new ResponseEntity<Category>(category0, HttpStatus.OK)
-                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(category0, HttpStatus.OK);
     }
 
     @GetMapping("/avitoNavigation")
@@ -58,7 +56,7 @@ public class HeaderRestController {
         list.add("Бизнес");
         list.add("Бизнес");
         list.add("Помощь");
-        return list != null && !list.isEmpty()
+        return !list.isEmpty()
                 ? new ResponseEntity<List<String>>(list, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
