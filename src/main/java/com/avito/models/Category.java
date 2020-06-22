@@ -8,7 +8,7 @@ import java.util.Set;
 
 @Data
 @Entity
-@Table(name = "categorys")
+@Table(name = "categories")
 public class Category {
 
     @Id
@@ -24,8 +24,7 @@ public class Category {
     public Category() {
     }
 
-    public Category(long id, String name, Set<Category> subCategories) {
-        this.id = id;
+    public Category(String name, Set<Category> subCategories) {
         this.name = name;
         this.subCategories = subCategories;
     }
